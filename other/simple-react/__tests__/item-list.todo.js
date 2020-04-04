@@ -1,3 +1,19 @@
+import React from 'react'
+import ReactDOM from 'react-dom'
+import ItemList from '../item-list'
+
+test('items are empty', () => {
+  const container = document.createElement('div')
+  ReactDOM.render(<ItemList items={[]} />, container)
+  expect(container.innerHTML).toMatch('no items')
+})
+
+test('there are items', () => {
+  const div = document.createElement('div')
+  ReactDOM.render(<ItemList items={[1, 2, 3, 4]} />, div)
+  expect(div.innerHTML).not.toMatch('no items')
+})
+
 // Your job:
 // Test the case where the items provided is empty:
 //   <ItemList items={[]} />
@@ -36,8 +52,8 @@
 /*
 http://ws.kcd.im/?ws=Testing&e=basic%20react%20test&em=
 */
-test.skip('I submitted my elaboration and feedback', () => {
-  const submitted = false // change this when you've submitted!
+test('I submitted my elaboration and feedback', () => {
+  const submitted = true // change this when you've submitted!
   expect(submitted).toBe(true)
 })
 ////////////////////////////////
