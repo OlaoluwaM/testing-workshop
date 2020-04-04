@@ -14,3 +14,4 @@ function getFormattedValue(value, language = 'en-US') {
 }
 
 export {getFormattedValue}
+
