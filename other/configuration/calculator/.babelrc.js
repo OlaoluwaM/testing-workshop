@@ -6,7 +6,7 @@ module.exports = {
     '@babel/preset-react',
   ],
   plugins: [
-    'syntax-dynamic-import',
+    '@babel/plugin-syntax-dynamic-import',
     'transform-class-properties',
     'transform-object-rest-spread',
   ],

@@ -18,13 +18,13 @@ module.exports = {
         test: /\.module\.css$/,
         use: [
           {loader: 'style-loader'},
-          {loader: 'css-loader', options: {modules: true, camelCase: true}},
+          {loader: 'css-loader', options: {modules: true}},
         ],
       },
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: 'babel-loader',
+        use: ['babel-loader'],
       },
       {
         test: /\.(eot|svg|ttf|woff|woff2)$/,
